@@ -1,24 +1,22 @@
-// import React from 'react'
-import StartCard from './components/StartCard'
-import RevenueChart from './components/RevenueChart'
-import RecentOrders from './components/RecentOrders'
-import SideBar from './components/SideBar'
-import TopBar from './components/TopBar'
+import { Routes, Route, Navigate } from 'react-router-dom'
+
+import Layout from './components/Layout'
+import Overview from './pages/Overview'
+import OrdersPage from './pages/OrdersPage'
+import CustomerPage from './pages/CustomerPage'
+import SettingsPage from './pages/SettingsPage'
 
 const App = () => {
   return (
-    <div className="flex min-h-screen bg-white font-sans text-slate-900">
-      <SideBar />
-      <div className="flex-1">
-      <TopBar />
-      <main className="p-6 space-y-6">  
-        <div className="grid grid-cols-4 "></div>
-        <RevenueChart />
-        <RecentOrders />
-      </main>
-      </div>
-     
-    </div>
+ <Routes>
+    <Route  element={<Layout />} >
+      <Route path="/" element={<Overview />} />
+      <Route path="/orders" element={<OrdersPage />} />
+      <Route path="/customers" element={<CustomerPage />} />
+      <Route path="/settings" element={<SettingsPage />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Route>
+  </Routes>
   )
 }
 

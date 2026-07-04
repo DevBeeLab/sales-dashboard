@@ -1,16 +1,22 @@
-# React + Vite
+# SALES DASHBOARD
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## IMPORTANT CODING CONCEPTS TO REMEMBER FOR REACT
 
-Currently, two official plugins are available:
+- `DRY`: _Don't Repeat Yourself_. Write a thing once, and then reuse it (is as relating to functions, components etc especially components)
+- `SRP`: _Single Responsibility_. Each piece of your code must do a specific thing, so there are no ambiguity. This sells the "modularized" coding flow, whereby removing one thing doesn't neccesarily break the entire codebase.
+- `OCP`: _Open/Closed_. Open to extension, closed to modification.
+- `SOC`: _Seperation of concerns_. Data, UI and styling must be kept apart. Components hold UI, hooks holde special functions etc
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## CASES IN REACT
 
-## React Compiler
+- `Snake_Case` or `snake_case`
+- `camelCase`
+- `PascalCase`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## XTICS OF A JSX FILE
 
-## Expanding the ESLint configuration
+1. You have your functions (js), styling (css-tailwind) and html written in 1 file
+2. It's file extension is `.jsx`
+3. You cannot return 2 elements in jsx functions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+NB: What ever component you create no matter how complex or small it is, must always point back or be imported (in a way) to or inside the app.jsx for it to show on the page

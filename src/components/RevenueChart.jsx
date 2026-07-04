@@ -6,8 +6,10 @@ const RevenueChart = () => {
 
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-5">
-      <h3 className="text-sm font-semibold text-slate-900">Revenue (last 6 months)</h3>
-      <div className="mt-4 flex h-48 items-end gap-2">
+      <h3 className="text-sm font-semibold text-slate-900">
+        Revenue (last 6 months)
+      </h3>
+      <div className="mt-6 flex h-48 items-end gap-2">
         {chartData.map((data) => {
           const barHeight = (data.value / maxValue) * 100
 
